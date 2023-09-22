@@ -1,0 +1,27 @@
+syntax = "proto3";
+/*
+By default, the compiler generates all the Java code in a single Java file. The second line
+overrides this setting, meaning everything will be generated in individual files.
+*/
+option java_multiple_files = true;
+package com.impressivehen.hello;
+
+message HelloRequest {
+  /*
+  So unlike JSON, where we’d pass the attribute name firstName every single time,
+  the protocol buffer will use the number 1 to represent firstName.
+   */
+  string firstName = 1;
+  string lastName = 2;
+}
+
+message HelloResponse {
+  string greeting = 1;
+}
+
+/*
+Simple RPC
+ */
+service HelloService {
+  rpc hello(HelloRequest) returns (HelloResponse);
+}
