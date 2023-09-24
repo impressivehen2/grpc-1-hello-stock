@@ -6,7 +6,9 @@ https://thenewstack.io/grpc-a-deep-dive-into-the-communication-pattern/
 #### Simple RPC Tutorial
 https://www.baeldung.com/grpc-introduction
 
-# Summary
+## Summary
+gRPC creates high-speed communication between microservices
+
 #### (a) client
 Grpc Client to connect to the server
 
